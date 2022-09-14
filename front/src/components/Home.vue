@@ -30,8 +30,10 @@
 </template>
 
 <script>
-  name: 'home'
+export default {};// name: 'home'
 </script>
+
+<!-- tudo isso aqui de css junto com o html é ciminoso ein levando em consideração como esta o codigo -->
 
 <style>
   .container {

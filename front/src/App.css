@@ -1,0 +1,15 @@
+/* so um css basico global que vale a pena sempre usar depois pode pesquisar o que é cada coisa */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
