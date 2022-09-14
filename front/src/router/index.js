@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Home from '../views/landing-page/Home.vue'
+import AboutUs from '../views/landing-page/AboutUs.vue'
+import Depoimentos from '../views/landing-page/Depoimentos.vue'
+import Cadastro from '../views/cadastro/Cadastro.vue'
+import Inscritos from '../views/inscritos/Inscritos.vue'
+import Pokedex from '../views/pokedex/Pokedex.vue'
+
 
 Vue.use(VueRouter)
 
@@ -8,15 +14,36 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: Home
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/about-us',
+    name: 'about-us',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: AboutUs
+  },
+  {
+    path: '/depoimentos',
+    name: 'depoimentos',
+    component: Depoimentos
+  },
+  {
+    path: '/cadastro',
+    name: 'cadastro',
+    component: Cadastro
+  },
+  {
+    path: '/inscritos',
+    name: 'inscritos',
+    component: Inscritos
+  },
+  {
+    path: '/pokedex',
+    name: 'pokedex',
+    component: Pokedex
   }
 ]
 
