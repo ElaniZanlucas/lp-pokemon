@@ -11,6 +11,12 @@
       <div class="nav-items">
         <v-btn class="nav-item btn"
           plain
+          href="#depoimentos"
+        >
+          Depoimentos
+        </v-btn>
+        <v-btn class="nav-item btn"
+          plain
           :to="{name: 'cadastro'}"
         >
           Cadastrar

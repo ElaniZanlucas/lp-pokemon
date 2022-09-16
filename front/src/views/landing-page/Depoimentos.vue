@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div id="depoimentos">
     Esta é uma página de depoimentos
   </div>
 </template>
 
 <script>
-export default {
+// export default {
 
-}
+// }
 </script>
 
 <style>

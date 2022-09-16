@@ -1,6 +1,8 @@
 <template>
   <v-app>
     <navbar/>
+    <!-- <home/> -->
+    <!-- <depoimentos/> -->
     <router-view/>
     
   </v-app>
@@ -8,6 +10,7 @@
 
 <script>
 import Navbar from './components/Navbar.vue';
+// import Home from './views/landing-page/Home.vue'
 
 export default {
   components: { Navbar },
