@@ -1,9 +1,9 @@
 <template>
-  <div class="container"
+  <div class="container-home"
   >
     <banner :titulo="bannerTitulo" :subtitulo="bannerSubtitulo"/>
     
-    <div class="cards">
+    <div class="cards-home">
       <card-home 
         titulo="Cadastre-se" 
         rota="cadastro" 
@@ -12,7 +12,7 @@
       <card-home 
         titulo="Inscritos" 
         rota="inscritos" 
-        texto="Veja quem possui coragem <br> de desafiar <br> os MegaDeuses <br> e faça parte dos audaciosos!"
+        texto="Veja quem possui coragem <br/> de desafiar <br> os MegaDeuses <br> e faça parte dos audaciosos!"
       />
       <card-home 
         titulo="Pokédex" 
@@ -20,21 +20,24 @@
         texto="Encontre os seus pokémons <br> favoritos <br> e entre para batalhar!"
       />
     </div>
+    <about-us/>
     <depoimentos/>
   </div>
 </template>
 
 <script>
-  import CardHome from '../../components/CardHome.vue'
   import Banner from '../../components/Banner.vue'
+  import CardHome from '../../components/CardHome.vue'
   import Depoimentos from './Depoimentos.vue'
+  import AboutUs from './AboutUs.vue'
 
   export default {
     name: 'home',
     components: {
       CardHome,
       Banner,
-      Depoimentos
+      Depoimentos,
+      AboutUs
     },
     data() {
       return {
@@ -53,13 +56,13 @@
     /* width: 100vw; */
   }
 
-  .container {
+  .container-home {
     background-color: #173BBC;
     padding-bottom: 4.8em;
     /* width: 100vw; */
   }
 
-  .cards {
+  .cards-home {
     display: flex;
     justify-content: space-around;
     align-items: center;

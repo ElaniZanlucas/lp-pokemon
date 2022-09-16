@@ -11,6 +11,12 @@
       <div class="nav-items">
         <v-btn class="nav-item btn"
           plain
+          :to="{name: 'about-us'}"
+        >
+          Sobre nós
+        </v-btn>
+        <v-btn class="nav-item btn"
+          plain
           href="#depoimentos"
         >
           Depoimentos
@@ -69,11 +75,11 @@
   .logo {
     font-size: 1.6rem !important;
     margin: 1.6em;
-    background-color: plum;
+    /* background-color: plum; */
   }
 
   .nav-items {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     /* justify-content: flex-end; */
     margin-left: 16em;    

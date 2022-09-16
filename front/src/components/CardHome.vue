@@ -1,13 +1,15 @@
 <template>
   <div>
-    <v-card class="card-home" :to="{name: rota}">
+    <v-card class="card-home rounded-lg" :to="{name: rota}">
       <v-card-title class="card-home-title">{{titulo}}</v-card-title>
       <div class="pokebola">
         <v-img src="../assets/Pokebola.png"></v-img>
       </div>
-      <v-card-text class="card-home-text">
-        {{texto}}
-      </v-card-text>
+      <!-- <div id="subtitulo" class="subtitulo"> -->
+        <v-card-text class="card-home-text fix-css">
+          {{texto}}
+        </v-card-text>
+      <!-- </div> -->
     </v-card>
   </div>
 </template>
@@ -19,7 +21,17 @@ export default {
     titulo: String,
     rota: String,
     texto: String
-  }
+  },
+  //  mounted() {
+  //       this.adicionarSubtitulo()
+  //   },
+  //   methods: {
+  //       adicionarSubtitulo() {
+  //           const div = document.createElement('div');
+  //           div.innerHTML = this.subtitulo
+  //           document.getElementById('subtitulo').appendChild(div)
+  //       }
+  //   }
 }
 </script>
 
@@ -32,7 +44,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 100px;
     margin: 0;
     text-transform: none;
     
@@ -63,4 +75,9 @@ export default {
     font-weight: bold;
     /* background-color: greenyellow; */
   }
+/* 
+  .fix-css {
+    white-space: pre-wrap !important;
+    background-color: green;
+  } */
 </style>
