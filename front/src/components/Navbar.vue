@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <v-toolbar class="toolbar">
+    <v-app-bar class="app-bar">
       <v-btn
         class="logo btn"
         plain
@@ -11,28 +11,34 @@
       <div class="nav-items">
         <v-btn class="nav-item btn"
           plain
-          :to="{name: 'about-us'}"
+          
+          href="#about-us"
         >
           Sobre nós
         </v-btn>
+
         <v-btn class="nav-item btn"
           plain
-          href="#depoimentos"
+          
+          href="/#depoimentos"
         >
           Depoimentos
         </v-btn>
+
         <v-btn class="nav-item btn"
           plain
           :to="{name: 'cadastro'}"
         >
           Cadastrar
         </v-btn>
+
         <v-btn class="nav-item btn"
           plain
           :to="{name: 'inscritos'}"
         >
           Inscritos
         </v-btn>
+
         <v-btn class="nav-item btn"
           plain
           :to="{name: 'pokedex'}"
@@ -40,7 +46,7 @@
           Pokédex
         </v-btn>
       </div>
-    </v-toolbar>
+    </v-app-bar>
   </div>
 </template>
 
@@ -57,41 +63,49 @@
     /* font-size: calc(8px * 1.618); */
   }
 
-  .toolbar {
+  .app-bar {
     background-color: #EF4036 !important;
     height: 12vh !important;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    position: static;
 
   }
 
   .btn {
     color: #FFCC01 !important;
-    text-shadow: -1px -1px 0 #202792, 1px -1px 0 #202792, -1px 1px 0 #202792, 1px 1px 0 #202792;
+    -webkit-text-stroke-width:1.2px;
+    -webkit-text-stroke-color: #202792;
     font-family: 'Pokemon Solid', sans-serif;
-    text-transform: capitalize;    
+    text-transform: capitalize !important;   
+    font-size: 1.2em !important; 
   }
 
   .logo {
-    font-size: 1.6rem !important;
+    font-size: 2rem !important;
     margin: 1.6em;
     /* background-color: plum; */
+    -webkit-text-stroke-width:2px;
+    -webkit-text-stroke-color: #202792;
   }
 
   .nav-items {
     /* background-color: aquamarine; */
     display: flex;
-    /* justify-content: flex-end; */
-    margin-left: 16em;    
-    
-
+    align-items: center;
+    justify-content: flex-end;
+    width: 72vw;
+    /* margin-left: 16em;     */
   }
 
   .nav-item {
     /* align-items: center; */
     /* display: flex; */
+    /* justify-content: space-around !important; */
     /* background-color: purple; */
-    font-size: 1rem !important;
+    /* font-size: 1rem !important; */
+    margin: 0 1.6em;
     
   }
 </style>

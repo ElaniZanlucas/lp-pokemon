@@ -5,11 +5,9 @@
       <div class="pokebola">
         <v-img src="../assets/Pokebola.png"></v-img>
       </div>
-      <!-- <div id="subtitulo" class="subtitulo"> -->
         <v-card-text class="card-home-text fix-css">
-          {{texto}}
+          <slot name="subtitulo"></slot> 
         </v-card-text>
-      <!-- </div> -->
     </v-card>
   </div>
 </template>
@@ -19,19 +17,8 @@ export default {
   name: 'card-home',
   props: {
     titulo: String,
-    rota: String,
-    texto: String
-  },
-  //  mounted() {
-  //       this.adicionarSubtitulo()
-  //   },
-  //   methods: {
-  //       adicionarSubtitulo() {
-  //           const div = document.createElement('div');
-  //           div.innerHTML = this.subtitulo
-  //           document.getElementById('subtitulo').appendChild(div)
-  //       }
-  //   }
+    rota: String
+  }
 }
 </script>
 
@@ -73,6 +60,7 @@ export default {
     color: #792C28 !important;
     font-family: 'Antaro', sans-serif;
     font-weight: bold;
+    font-size: 1em;
     /* background-color: greenyellow; */
   }
 /* 

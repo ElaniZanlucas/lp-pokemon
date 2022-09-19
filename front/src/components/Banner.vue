@@ -5,7 +5,7 @@
     </v-banner>
 
     <div class="banner-subtitle">
-      {{subtitulo}}
+      <slot name="subtitulo"></slot>
     </div>
   </div>
 </template>
@@ -14,8 +14,7 @@
 export default {
   name: 'banner',
   props: {
-    titulo: String,
-    subtitulo: String
+    titulo: String
   }
 
 }

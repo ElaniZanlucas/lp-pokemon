@@ -1,24 +1,60 @@
 <template>
   <div class="container-home"
   >
-    <banner :titulo="bannerTitulo" :subtitulo="bannerSubtitulo"/>
+    <banner :titulo="bannerTitulo">
+      <template v-slot:subtitulo>
+        <div>
+          Você está pronto para entrar no ginásio e mostrar do que é capaz?
+          <br>
+          Então seja bem-vindo à Mega Batalha Pokémon!
+        </div>
+      </template>
+    </banner>
     
     <div class="cards-home">
       <card-home 
         titulo="Cadastre-se" 
-        rota="cadastro" 
-        texto="Embarque nessa jornada <br> com seus amigos <br> e descubra quem é o melhor!"
-      />
+        rota="cadastro">
+        <template v-slot:subtitulo>
+          <div>
+            Embarque nessa jornada 
+            <br> 
+            com seus amigos 
+            <br>
+            e descubra quem é o melhor!
+          </div>
+        </template> 
+      </card-home>
       <card-home 
         titulo="Inscritos" 
-        rota="inscritos" 
-        texto="Veja quem possui coragem <br/> de desafiar <br> os MegaDeuses <br> e faça parte dos audaciosos!"
-      />
+        rota="inscritos"
+        >
+        <template v-slot:subtitulo>
+          <div>
+            Veja quem possui coragem 
+            <br/>
+            de desafiar
+            <br>
+            os MegaDeuses
+            <br>
+            e faça parte dos audaciosos!
+          </div>
+        </template>
+      </card-home>
       <card-home 
         titulo="Pokédex" 
         rota="pokedex" 
-        texto="Encontre os seus pokémons <br> favoritos <br> e entre para batalhar!"
-      />
+      >
+        <template v-slot:subtitulo>
+          <div>
+            Encontre os seus pokémons 
+            <br> 
+            favoritos 
+            <br> 
+            e entre para batalhar!
+          </div>
+        </template>
+      </card-home>
     </div>
     <about-us/>
     <depoimentos/>
