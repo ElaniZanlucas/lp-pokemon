@@ -19,7 +19,7 @@
 
         <v-btn class="nav-item btn"
           plain
-          
+          :to="{name: 'depoimentos'}"
           href="/#depoimentos"
         >
           Depoimentos

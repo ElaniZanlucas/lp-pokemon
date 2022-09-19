@@ -77,8 +77,7 @@
     },
     data() {
       return {
-        bannerTitulo: "A Batalha contra os MegaDeuses se inicia agora.",
-        bannerSubtitulo: "Você está pronto para entrar no ginásio e mostrar do que é capaz\? <br> Então seja bem-vindo à Mega Batalha Pokémon!"
+        bannerTitulo: "A Batalha contra os MegaDeuses se inicia agora."
       }
     }
   }

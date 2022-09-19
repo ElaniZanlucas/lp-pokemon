@@ -35,8 +35,7 @@ export default {
     },
     data() {
       return {
-        bannerTitulo: "Quem são os MegaDeuses \?",
-        bannerSubtitulo: "Procuramos os mestres pokémons mais ousados para serem nossos oponentes e batalharem contra nós. Se você acha que pode nos derrotar, então inscreva-se e que vença o melhor! Só não saia chorando depois...."
+        bannerTitulo: "Quem são os MegaDeuses \?"
       }
     }
 }
