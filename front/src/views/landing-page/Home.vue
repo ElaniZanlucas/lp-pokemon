@@ -10,7 +10,7 @@
         </div>
       </template>
     </banner>
-    
+     
     <div class="cards-home">
       <card-home 
         titulo="Cadastre-se" 
