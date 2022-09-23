@@ -1,5 +1,14 @@
 <template>
   <v-app>
+    <banner :titulo="bannerTitulo">
+      <template v-slot:subtitulo>
+        <div>
+          Pesquise os Pokémons, veja suas forças e 
+          <br>
+          escolha-os para a MegaBatalha.
+        </div>
+      </template>
+    </banner>
     <v-container>
       <v-container>
         <v-text-field
@@ -32,7 +41,7 @@
 
 <script>
 import axios from "axios";
-
+import Banner from "../../components/Banner.vue"
 import PokemonCard from "../../components/CardPokemon.vue";
 import PokemonInfoDialog from "../../components/PokemonInfoDialog.vue";
 
@@ -40,6 +49,7 @@ export default {
   name: "App",
 
   components: {
+    Banner,
     PokemonCard,
     PokemonInfoDialog,
   },
@@ -50,6 +60,7 @@ export default {
       search: "",
       show_dialog: false,
       selected_pokemon: null,
+      bannerTitulo: "Pokédex",
     };
   },
 
@@ -91,7 +102,7 @@ export default {
 
 <style>
 #app {
-  background: #DDDDDD;
+  background: #173BBC;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
