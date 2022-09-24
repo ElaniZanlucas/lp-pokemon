@@ -1,63 +1,108 @@
 <template>
-  <div class="container"
+  <div class="container-home"
   >
-    <v-banner class="home"
-    >
-      A Batalha contra os MegaDeuses se inicia agora.
-    </v-banner>
-
-    <div>
-      Você está pronto para entrar no ginásio e mostrar do que é capaz?
-      <br>
-      Então seja bem-vindo à Mega Batalha Pokémon!
+    <banner :titulo="bannerTitulo">
+      <template v-slot:subtitulo>
+        <div>
+          Você está pronto para entrar no ginásio e mostrar do que é capaz?
+          <br>
+          Então seja bem-vindo à Mega Batalha Pokémon!
+        </div>
+      </template>
+    </banner>
+     
+    <div class="cards-home">
+      <card-home 
+        titulo="Cadastre-se" 
+        rota="cadastro">
+        <template v-slot:subtitulo>
+          <div>
+            Embarque nessa jornada 
+            <br> 
+            com seus amigos 
+            <br>
+            e descubra quem é o melhor!
+          </div>
+        </template> 
+      </card-home>
+      <card-home 
+        titulo="Inscritos" 
+        rota="inscritos"
+        >
+        <template v-slot:subtitulo>
+          <div>
+            Veja quem possui coragem 
+            <br/>
+            de desafiar
+            <br>
+            os MegaDeuses
+            <br>
+            e faça parte dos audaciosos!
+          </div>
+        </template>
+      </card-home>
+      <card-home 
+        titulo="Pokédex" 
+        rota="pokedex" 
+      >
+        <template v-slot:subtitulo>
+          <div>
+            Encontre os seus pokémons 
+            <br> 
+            favoritos 
+            <br> 
+            e entre para batalhar!
+          </div>
+        </template>
+      </card-home>
     </div>
-    
-    <div>
-      <v-card class="card">
-        <v-card-title class="card-title">Cadastre-se</v-card-title>
-        <v-card-text class="card-text">Embarque nessa jornada com seus amigos e descubra quem é o melhor!</v-card-text>
-      </v-card>
-      <v-card class="card">
-        <v-card-title class="card-title">Inscritos</v-card-title>
-        <v-card-text class="card-text">Veja quem possui coragem de desafiar os MegaDeuses e faça parte dos audaciosos!</v-card-text>
-      </v-card>
-      <v-card class="card">
-        <v-card-title class="card-title">Pokédex</v-card-title>
-        <v-card-text class="card-text">Encontre os seus pokémons favoritos e entre para batalhar!</v-card-text>
-      </v-card>
-    </div>
+    <about-us/>
+    <depoimentos/>
   </div>
 </template>
 
 <script>
-  name: 'home'
+  import Banner from '../../components/Banner.vue'
+  import CardHome from '../../components/CardHome.vue'
+  import Depoimentos from './Depoimentos.vue'
+  import AboutUs from './AboutUs.vue'
+
+  export default {
+    name: 'home',
+    components: {
+      CardHome,
+      Banner,
+      Depoimentos,
+      AboutUs
+    },
+    data() {
+      return {
+        bannerTitulo: "A Batalha contra os MegaDeuses se inicia agora."
+      }
+    }
+  }
+
 </script>
 
 <style>
-  .container {
+  * {
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+  }
+
+  .container-home {
     background-color: #173BBC;
-    height: 100vh;
+    padding-bottom: 4.8em;
+    /* width: 100vw; */
   }
 
-  .home {
-    background-color: #2F2F4D !important;
-    color: #FFCC01 !important;
-    text-shadow: -1px -1px 0 #2F2F4D, 1px -1px 0 #2F2F4D, -1px 1px 0 #2F2F4D, 1px 1px 0 #2F2F4D;
-    font-family: 'PixAntiqua', sans-serif;
-    margin-top: 4em;    
+  .cards-home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4em 12em;
+    /* background-color: #01ff38; */
   }
 
-  .card {
-    background-color: #CBE4EA !important;
-  }
-
-  .card-title {
-    color: #F9F2E7;
-    font-family: 'PixAntiqua', sans-serif;
-    text-shadow: -1px -1px 0 #FE0000, 1px -1px 0 #FE0000, -1px 1px 0 #FE0000, 1px 1px 0 #FE0000;
-  }
-
-  /* .card-text {
-    
-  } */
-</style>
+  </style>
