@@ -9,7 +9,7 @@
                         cols="12"
                         >
                             <v-text-field
-                                height="20"
+                                height="18"
                                 v-model="name"
                                 :rules="nameRules"
                                 :counter="120"
@@ -24,7 +24,7 @@
                         cols="12"
                         >
                             <v-text-field
-                                height="20"
+                                height="18"
                                 v-model="email"
                                 :rules="emailRules"
                                 label="E-mail"
@@ -40,8 +40,8 @@
                     >
                         <template v-slot:activator="{ on, attrs }">
 
-                                <v-btn
-                                color="#CBE4EA"
+                                <v-btn class="tipos"
+                                color="#202792"
                                 small
                                 dark
                                 v-bind="attrs"
@@ -53,7 +53,7 @@
                         </template>
 
                         <v-card>
-                            <v-card-title class="text-h5 grey lighten-2">
+                            <v-card-title class="tipos-dentro">
                             Tipos
                             </v-card-title>
 
@@ -86,7 +86,7 @@
                         align-self="center"
                         >
                         <v-text-field
-                            label="pokemon 1"
+                            label="Pokemon 1"
                             prepend-icon="$vuetify.icons.pokebola"
                             dark
                             large
@@ -101,7 +101,7 @@
                         align-self="center"
                         >
                         <v-text-field
-                            label="pokemon 1"
+                            label="Pokemon 2"
                             prepend-icon="$vuetify.icons.pokebola"
                             dark
                         ></v-text-field>
@@ -115,7 +115,7 @@
                         align-self="center"
                         >
                         <v-text-field
-                            label="pokemon 1"
+                            label="Pokemon 3"
                             prepend-icon="$vuetify.icons.pokebola"
                             dark
                         ></v-text-field>
@@ -157,7 +157,7 @@ import Pokebola from "./Pokebola.vue";
   
   <style>
     .card-cadastro {
-      height: 26em;
+      height: 27em;
       width: 20em;
       display: flex;
       background-color: #173BBC !important;
@@ -190,8 +190,8 @@ import Pokebola from "./Pokebola.vue";
       /* background-color: greenyellow; */
     }
 
-    .rounded-lg{
-       margin: 10px;
+    .tipos{
+        text-transform: capitalize !important;
     }
   /* 
     .fix-css {

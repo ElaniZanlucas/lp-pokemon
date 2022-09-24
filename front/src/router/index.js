@@ -6,6 +6,7 @@ import Depoimentos from '../views/landing-page/Depoimentos.vue'
 import Cadastro from '../views/cadastro/Cadastro.vue'
 import Inscritos from '../views/inscritos/Inscritos.vue'
 import Pokedex from '../views/pokedex/Pokedex.vue'
+import Finalizado from '../views/cadastro/Finalizado.vue'
 
 
 Vue.use(VueRouter)
@@ -44,7 +45,12 @@ const routes = [
     path: '/pokedex',
     name: 'pokedex',
     component: Pokedex
-  }
+  },
+  {
+    path: '/finalizado',
+    name: 'finalizado',
+    component: Finalizado
+  },
 ]
 
 const router = new VueRouter({
