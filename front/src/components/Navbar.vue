@@ -11,15 +11,13 @@
       <div class="nav-items">
         <v-btn class="nav-item btn"
           plain
-          
-          href="#about-us"
+          href="/#about-us"
         >
           Sobre nós
         </v-btn>
 
         <v-btn class="nav-item btn"
           plain
-          :to="{name: 'depoimentos'}"
           href="/#depoimentos"
         >
           Depoimentos
@@ -51,16 +49,22 @@
 </template>
 
 <script>
-// export default {
-
-// }
+export default {
+  name: 'navbar'
+}
 </script>
 
 <style>
 * {
     margin: 0;
     padding: 0;
-    /* font-size: calc(8px * 1.618); */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999;
   }
 
   .app-bar {
@@ -69,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: static;
+    /* position: static; */
 
   }
 
@@ -84,7 +88,7 @@
 
   .logo {
     font-size: 2rem !important;
-    margin: 1.6em;
+    /* margin: 1.6em; */
     /* background-color: plum; */
     -webkit-text-stroke-width:2px;
     -webkit-text-stroke-color: #202792;
@@ -93,10 +97,12 @@
   .nav-items {
     /* background-color: aquamarine; */
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 72vw;
-    /* margin-left: 16em;     */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* width: 72vw; */
+    /* margin: 0 4em 0 8em;     */
+    /* margin-right: 4em; */
+    margin-left: 8em;
   }
 
   .nav-item {
@@ -105,7 +111,8 @@
     /* justify-content: space-around !important; */
     /* background-color: purple; */
     /* font-size: 1rem !important; */
-    margin: 0 1.6em;
+    /* justify-content: space-around; */
+    margin: 0 0.8em;
     
   }
 </style>

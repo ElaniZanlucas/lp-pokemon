@@ -1,5 +1,5 @@
 <template>
-  <div class="container-about-us">
+  <div id="about-us" class="container-about-us">
     <banner :titulo="bannerTitulo">
       <template v-slot:subtitulo>
         <div>
@@ -29,6 +29,7 @@
   import Banner from '../../components/Banner.vue'
   import CardAboutUs from '../../components/CardAboutUs.vue'
 export default {
+  name: 'about-us',
   components: {
       Banner,
       CardAboutUs

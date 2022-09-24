@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <navbar/>
-    <!-- <home/> -->
-    <!-- <depoimentos/> -->
-    <router-view/>
+    <router-view class="pages"/>
     
   </v-app>
 </template>
@@ -24,8 +22,17 @@ export default {
 
 <style>
   @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-  @import url('https://www.urbanfonts.com/fonts/PixAntiqua.font');
-  @import url('https://www.urbanfonts.com/fonts/Antaro_Font.font');
-  @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+  @import url('http://fonts.cdnfonts.com/css/pixantiqua');
+  @import url('http://fonts.cdnfonts.com/css/antaro');
+  @import url('http://fonts.cdnfonts.com/css/play');
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .pages {
+    padding-top: 6.4em;
+  }
 </style>
                 
