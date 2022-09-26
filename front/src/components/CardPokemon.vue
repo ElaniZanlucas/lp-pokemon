@@ -1,5 +1,5 @@
 <template>
-  <v-card @click="show_pokemon(get_id(pokemon))" :flat="flat">
+  <v-card class="rounded-lg" @click="show_pokemon(get_id(pokemon))" :flat="flat">
     <v-container>
       <v-row class="mx-0 d-flex justify-center">
         <img

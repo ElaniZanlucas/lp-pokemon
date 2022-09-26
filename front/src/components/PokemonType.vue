@@ -1,5 +1,5 @@
 <template>
-  <v-chip :color="color" label class="mr-2 white--text"> {{ name }}</v-chip>
+  <v-chip :color="color" label class="mr-2 white--text rounded-xl chip-types"> {{ name }}</v-chip>
 </template>
 
 <script>
@@ -57,4 +57,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .chip-types {
+    width: 5.6em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4em;
+  }
+</style>

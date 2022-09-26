@@ -109,5 +109,6 @@ export default {
   background-size: cover !important;
   background-position: center;
   min-height: 100vh;
+  font-family: 'PixAntiqua', sans-serif;
 }
 </style>
