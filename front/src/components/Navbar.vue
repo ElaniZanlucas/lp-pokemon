@@ -69,7 +69,7 @@ export default {
 
   .app-bar {
     background-color: #EF4036 !important;
-    height: 12vh !important;
+    height: 10vh !important;
     display: flex;
     align-items: center;
     justify-content: flex-start;

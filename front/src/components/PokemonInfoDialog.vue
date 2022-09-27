@@ -1,6 +1,6 @@
 <template>
-  <v-dialog v-model="show" width="480">
-    <v-card v-if="selected_pokemon" class="rounded-xl">
+  <v-dialog v-model="show" width="440">
+    <v-card v-if="selected_pokemon" class="rounded-xl" height="480">
       <v-container class="dialog-container">
         <div class="dialog-pokemon">
           <v-row class="name-id">
@@ -30,7 +30,6 @@
         </div>
 
         <v-card class="stats dialog-pokemon rounded-xl">
-          <h2 class="mt-4">Status</h2>
           <Stats :pokemon="selected_pokemon" />
         </v-card>
       </v-container>
@@ -90,6 +89,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Play', sans-serif;
+    color: #F5F5F6;
     // margin: 2em 2em 0 2em;
   }
 

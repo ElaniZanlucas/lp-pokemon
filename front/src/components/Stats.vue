@@ -2,42 +2,36 @@
   <v-row>
     <v-col
       cols="12"
-      v-for="(stat, index) in pokemon.stats"
+      v-for="(stat) in pokemon.stats"
       :key="stat.stat.name"
     >
-      <v-col
-        cols="3"
-      >
-        {{ transform_name(stat.stat.name) }} {{ stat.base_stat }}
+      <v-col class="col-stats">
+        <div class="div-stats">
+          <p class="p-stats">
+            {{ transform_name(stat.stat.name) }}
+          </p>
+          <p>
+            {{ stat.base_stat }}
+          </p>
+        </div>
+        <v-progress-linear 
+          :value="stat.base_stat" 
+          :color="stat.base_stat >= 50 ? '#4BC07A' : '#FB6C6C' "
+          background-color="#CBE4EA"
+        ></v-progress-linear>
       </v-col>
-
-      <v-chip
-        :color="color[index]"
-        label
-        class="d-flex justify-center text-center white--text"
-      >
-        {{ transform_name(stat.stat.name) }} {{ stat.base_stat }}
-      </v-chip>
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      color: [
-        "red",
-        "orange darken-1",
-        "yellow darken-2",
-        "blue",
-        "green",
-        "pink",
-      ],
-    };
-  },
   props: {
     pokemon: Object,
+    doubleColor: {
+      type: Boolean,
+      default: true
+    },
   },
   methods: {
     transform_name(name) {
@@ -54,4 +48,26 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+  .col-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.6em;
+  }
+
+  .div-stats {
+    display: flex;
+    align-items: flex-start;
+    height: 2em;
+    width: 11.2em;
+    justify-content: space-between;
+    margin-right: 1em;
+    color: #58585A;
+    /* background-color: blue; */
+  }
+
+  .p-stats {
+    font-family: 'PixAntiqua', sans-serif;
+  }
+</style>

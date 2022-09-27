@@ -36,7 +36,7 @@ export default {
         case "fairy":
           return "#FDB9E9";
         case "flying":
-          return "teal";
+          return "#3DC7EF";
         case "normal":
           return "#A4ACAF";
         case "fighting":
@@ -63,5 +63,9 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 0.4em;
+  }
+
+  .flying-color {
+    color: linear-gradient(to bottom right, red, yellow);
   }
 </style>

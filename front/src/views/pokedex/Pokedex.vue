@@ -78,17 +78,6 @@ export default {
         this.show_dialog = !this.show_dialog;
       });
     },
-    get_move_level(move) {
-      for (let version of move.version_group_details) {
-        if (
-          version.version_group.name == "sword-shield" &&
-          version.move_learn_method.name == "level-up"
-        ) {
-          return version.level_learned_at;
-        }
-      }
-      return 0;
-    },
   },
   computed: {
     filtered_pokemons() {
