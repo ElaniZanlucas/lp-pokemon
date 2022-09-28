@@ -10,7 +10,7 @@
                         >
                             <v-text-field
                                 height="18"
-                                v-model="name"
+                                v-model="name1"
                                 :rules="nameRules"
                                 :counter="120"
                                 label="Nome"
@@ -34,63 +34,24 @@
                             ></v-text-field>
                         </v-col>
                     </v-row>
-                    <v-dialog
-                    v-model="dialog"
-                    width="500"
-                    >
-                        <template v-slot:activator="{ on, attrs }">
-
-                                <v-btn class="tipos"
-                                color="#202792"
-                                small
-                                dark
-                                v-bind="attrs"
-                                v-on="on"
-                                >
-                                Tipos
-                                </v-btn>
-                            
-                        </template>
-
-                        <v-card>
-                            <v-card-title class="tipos-dentro">
-                            Tipos
-                            </v-card-title>
-
-                            <v-card-text>
-                            aqui vão os tipos(botoes)
-                            </v-card-text>
-
-                            <v-divider></v-divider>
-
-                            <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                color="primary"
-                                text
-                                @click="dialog = false"
-                            >
-                                I accept
-                            </v-btn>
-                            </v-card-actions>
-                        </v-card>
-                    </v-dialog>
 
 
                     <v-row
                     justify="center"
                     aligh-content="center"
                     >
+                    
                         <v-col
                         cols="12"
                         align-self="center"
                         >
-                        <v-text-field
-                            label="Pokemon 1"
-                            prepend-icon="$vuetify.icons.pokebola"
-                            dark
-                            large
-                        ></v-text-field>
+                        <v-select
+                        :items="pokemons2"
+                        dark
+                        prepend-icon="$vuetify.icons.pokebola"
+                        label="Pokémon 1"
+                        >
+                        </v-select>
                         </v-col>
                     </v-row>
                     <v-row
@@ -100,11 +61,13 @@
                         cols="12"
                         align-self="center"
                         >
-                        <v-text-field
-                            label="Pokemon 2"
-                            prepend-icon="$vuetify.icons.pokebola"
-                            dark
-                        ></v-text-field>
+                        <v-select
+                        :items="pokemons2"
+                        dark
+                        prepend-icon="$vuetify.icons.pokebola"
+                        label="Pokémon 2"
+                        >
+                        </v-select>
                         </v-col>
                     </v-row>
                     <v-row
@@ -114,11 +77,13 @@
                         cols="12"
                         align-self="center"
                         >
-                        <v-text-field
-                            label="Pokemon 3"
-                            prepend-icon="$vuetify.icons.pokebola"
-                            dark
-                        ></v-text-field>
+                        <v-select
+                        :items="pokemons2"
+                        dark
+                        prepend-icon="$vuetify.icons.pokebola"
+                        label="Pokémon 3"
+                        >
+                        </v-select>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -130,16 +95,22 @@
   
   <script>
 import Pokebola from "./Pokebola.vue";
+import Pokedex from "../views/pokedex/Pokedex.vue";
+import axios from "axios";
+
   export default {
     name: "card-cadastro",
     props: {
-        rota: String
+        rota: String,
     },
+    components: { Pokebola, Pokedex},
     data() {
         return {
+            pokemons: [],
+            pokemons2: [],
             dialog: false,
             valid: false,
-            name: "",
+            name1: "",
             nameRules: [
                 v => !!v || "Name is required",
                 v => v.length <= 120 || "Name must be less than 10 characters",
@@ -151,7 +122,16 @@ import Pokebola from "./Pokebola.vue";
             ],
         };
     },
-    components: { Pokebola }
+    mounted() {
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=151")
+      .then((response) => {
+        this.pokemons = response.data.results;
+        for (var id=0;id<151;id++){
+            this.pokemons2.push( this.pokemons[id].name );
+      }
+      });
+  },
 }
   </script>
   

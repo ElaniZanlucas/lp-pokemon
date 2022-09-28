@@ -48,7 +48,7 @@
     background-image: url("../../assets/pokereganto.jpg");
     /*background-repeat: repeat;*/
     background-color: #DDDDDD;
-    background-size: 88em;
+    background-size: cover;
     height: 100vh; /*88 para não ter rolamento*/
   }
   .finalizado-conteiner{

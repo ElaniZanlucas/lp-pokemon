@@ -43,7 +43,7 @@ const routes = [
     component: Pokedex
   },
   {
-    path: '/finalizado',
+    path: '/cadastro/finalizado',
     name: 'finalizado',
     component: Finalizado
   },
