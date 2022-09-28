@@ -91,7 +91,6 @@ export default {
     align-items: center;
     font-family: 'Play', sans-serif;
     color: #F5F5F6;
-    // margin: 2em 2em 0 2em;
   }
 
   .sprites {

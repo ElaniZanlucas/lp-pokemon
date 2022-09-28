@@ -40,12 +40,11 @@ export default {
   .card-home-title {
     color: #F9F2E7;
     font-family: 'PixAntiqua', sans-serif;
-    text-shadow: -1px -1px 0 #FE0000, 1px -1px 0 #FE0000, -1px 1px 0 #FE0000, 1px 1px 0 #FE0000;
+    -webkit-text-stroke: 1px #FE0000;
     font-size: 1.6em;
   }
 
   .pokebola {
-    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,11 +60,6 @@ export default {
     font-family: 'Antaro', sans-serif;
     font-weight: bold;
     font-size: 1em;
-    /* background-color: greenyellow; */
   }
-/* 
-  .fix-css {
-    white-space: pre-wrap !important;
-    background-color: green;
-  } */
+
 </style>

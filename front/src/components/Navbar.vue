@@ -55,11 +55,6 @@ export default {
 </script>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-  }
-
   .navbar {
     position: fixed;
     top: 0;
@@ -73,14 +68,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* position: static; */
-
   }
 
   .btn {
     color: #FFCC01 !important;
-    -webkit-text-stroke-width:1.2px;
-    -webkit-text-stroke-color: #202792;
+    -webkit-text-stroke: 1.2px  #202792;    
     font-family: 'Pokemon Solid', sans-serif;
     text-transform: capitalize !important;   
     font-size: 1.2em !important; 
@@ -88,31 +80,15 @@ export default {
 
   .logo {
     font-size: 2rem !important;
-    /* margin: 1.6em; */
-    /* background-color: plum; */
-    -webkit-text-stroke-width:2px;
-    -webkit-text-stroke-color: #202792;
+    -webkit-text-stroke: 2px  #202792;    
   }
 
   .nav-items {
-    /* background-color: aquamarine; */
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-around; */
-    /* width: 72vw; */
-    /* margin: 0 4em 0 8em;     */
-    /* margin-right: 4em; */
     margin-left: 8em;
   }
 
   .nav-item {
-    /* align-items: center; */
-    /* display: flex; */
-    /* justify-content: space-around !important; */
-    /* background-color: purple; */
-    /* font-size: 1rem !important; */
-    /* justify-content: space-around; */
     margin: 0 0.8em;
-    
   }
 </style>

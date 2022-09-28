@@ -10,10 +10,6 @@
         </div>
       </div>
 
-      <div class="mega-deuses">
-        <v-img class="rounded-lg" src="../assets/megadeuses-s.png"></v-img>
-      </div>
-
       <v-row no-gutters class="descricao">
         Nome: {{megaNome}}
       </v-row>
@@ -39,15 +35,14 @@
 export default {
   name: 'card-about-us',
   props: {
-    megaDeuses: String,
+    megaNome: String,
     megaDescricao: String,
     cardPar: {
       type: Boolean,
       default: true
     },
-    megaNome: String,
-    
   },
+  
 }
 </script>
 
@@ -55,7 +50,6 @@ export default {
   .card-about-us {
     width: 18em;
     height: 25.4em;
-    background-color: greenyellow;
   }
 
   .mega-logo {
@@ -71,14 +65,6 @@ export default {
     right: 8px;
   }
 
-  .mega-deuses {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 14em;
-    background-color: aqua;
-  }
-
   .pokebolas {
     display: flex;
     justify-content: space-around;
@@ -91,5 +77,10 @@ export default {
 
   .descricao {
     font-family: 'PixAntiqua', sans-serif;
+    color: #F9F2E7;
+    font-weight: bold;
+    -webkit-text-stroke: 0.2px #58585A;
+    padding: 0.4em 1em;    
+    /* background-color: aqua; */
   }
 </style>

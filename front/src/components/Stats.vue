@@ -64,7 +64,6 @@ export default {
     justify-content: space-between;
     margin-right: 1em;
     color: #58585A;
-    /* background-color: blue; */
   }
 
   .p-stats {
