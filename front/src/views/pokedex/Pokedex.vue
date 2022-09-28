@@ -93,7 +93,7 @@ export default {
   computed: {
     filtered_pokemons() {
       return this.pokemons.filter((item) => {
-        return item.name.includes(this.search);
+        return item.name.includes(this.search.toLowerCase());
       });
     },
   },
