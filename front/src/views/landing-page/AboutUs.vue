@@ -14,27 +14,31 @@
  
     <v-img src="../../assets/wtpokemon.png">
       <v-row class="cards-about-us">
-        <v-col>
-            <card-about-us 
-              megaNome="Shino"
-              megaDescricao="O terror dos noobs"
-              :cardPar="true"
-            >
-            <v-img class="rounded-lg mega-deuses" src="../../assets/megadeuses-s.png">
-          </v-img>         
-          </card-about-us>
+        <card-about-us 
+            megaNome="Shino"
+            megaDeuses="megadeuses-s.png"
+            megaDescricao="O terror dos noobs"
+            megaPokemon1="145"
+            megaPokemon2="125"
+            megaPokemon3="100"
+            titlePokemon1="Zapdos"
+            titlePokemon2="Electabuzz"
+            titlePokemon3="Voltorb"
+            :cardPar="true"
+          />
           
-        </v-col>
-        <v-col>
-          <v-img class="rounded-lg mega-deuses" src="../../assets/megadeuses-y.png"></v-img>
-            <card-about-us 
-              class="about-us-card"
-              megaNome="Yasmin"
-              megaDescricao="A garota em chamas"
-              :cardPar="false"
-            >
-          </card-about-us>
-        </v-col>
+          <card-about-us 
+            megaNome="Yasmin"
+            megaDeuses="megadeuses-y.png"
+            megaDescricao="A garota em chamas"
+            megaPokemon1="5"
+            megaPokemon2="77"
+            megaPokemon3="136"
+            titlePokemon1="Charmeleon"
+            titlePokemon2="Ponyta"
+            titlePokemon3="Flareon"
+            :cardPar="false"
+          />
       </v-row>
     </v-img>
     
@@ -64,17 +68,10 @@ export default {
     padding-bottom: 4.8em;
   }
 
-  .mega-deuses {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: flex-end; */
-    /* position: relative;
-    top: 0;
-    left: 0; */
-    overflow: visible;
-    margin: 0 1em;
-    width: 16em;
-    background-color: aqua;
+  .cards-about-us {
+    margin: 8em 0 0 6.4em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
-
 </style>

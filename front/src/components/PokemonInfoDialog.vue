@@ -78,7 +78,7 @@ export default {
 <style lang="scss" scoped>
   .dialog-container {
     padding: 0;
-    background-color: green;
+    background-color: #00A8C6;
   }
 
   .dialog-pokemon {
