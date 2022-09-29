@@ -7,7 +7,9 @@
         </svg>
         
         <div class="mega-img">
-          <v-img src="../assets/mega-logo.png"></v-img>
+          <a href="https://www.megajunior.com.br/" target="_blank">
+            <v-img src="../assets/mega-logo.png"></v-img>
+          </a>
         </div>
       </div>
 
@@ -85,11 +87,10 @@ export default {
     
   .descricao {
     font-family: 'PixAntiqua', sans-serif;
-    color: #F9F2E7;
-    font-weight: bold;
-    -webkit-text-stroke: 0.2px #58585A;
+    color: #2F2F4D;
+    -webkit-text-stroke: 0.1px #F9F2E7;
     padding: 0.4em 1em;    
-  }
+  } 
 
   .pokebolas {
     display: flex;
@@ -99,6 +100,14 @@ export default {
   .pokebola {
     max-height: 3.6em;
     max-width: 3.6em;
+    transition: transform 0.5s;
+  }
+
+  .pokebola:hover {
+    transform: rotate(720deg);
+    background-image: url("../assets/Pokebola.png");
+    background-position: center;
+    background-size: cover;
   }
 
 </style>
