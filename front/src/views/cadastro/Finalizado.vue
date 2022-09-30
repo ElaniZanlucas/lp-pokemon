@@ -1,6 +1,10 @@
 <template>
     <div class="container-finalizado"
     >
+      <audio id="opening" 
+        src="../../assets/Opening.mp3"
+        loop
+      ></audio>
       <banner :titulo="bannerTitulo">
         <template v-slot:subtitulo>
           <div>
@@ -37,6 +41,16 @@
           bannerTitulo: "Cadastro realizado!",
           dialog: false
         }
+      },
+      mounted(){
+        this.playSound();
+      },
+      methods: {
+        playSound () {
+          var player = document.getElementById('opening');
+          player.play()
+          player.volume = 0.2; 
+        },
       }
       
     }
