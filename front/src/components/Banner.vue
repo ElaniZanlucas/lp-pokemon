@@ -27,7 +27,7 @@ export default {
       height: 3.2em;
       display: flex;
       align-items: center;
-      text-shadow: -1px -1px 0 #2F2F4D, 1px -1px 0 #2F2F4D, -1px 1px 0 #2F2F4D, 1px 1px 0 #2F2F4D;
+      -webkit-text-stroke: 0.2px #2F2F4D;
       font-family: 'PixAntiqua', sans-serif;
       margin-top: 4em;    
       text-align: center;
@@ -35,7 +35,7 @@ export default {
 
   .banner-subtitle {
     color: #CBE4EA;
-    text-shadow: -1px -1px 0 #173BBC, 1px -1px 0 #173BBC, -1px 1px 0 #173BBC, 1px 1px 0 #173BBC;
+    -webkit-text-stroke:0.2px #173BBC;    
     font-family: 'PixAntiqua', sans-serif;
     margin: 2.4em 0;
     display: flex;

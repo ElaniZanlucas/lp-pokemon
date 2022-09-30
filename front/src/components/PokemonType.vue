@@ -1,5 +1,5 @@
 <template>
-  <v-chip :color="color" label class="mr-2 white--text"> {{ name }}</v-chip>
+  <v-chip :color="color" label class="mr-2 white--text rounded-xl chip-types"> {{ name }}</v-chip>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
         case "fairy":
           return "#FDB9E9";
         case "flying":
-          return "teal";
+          return "#3DC7EF";
         case "normal":
           return "#A4ACAF";
         case "fighting":
@@ -57,4 +57,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .chip-types {
+    width: 5.6em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4em;
+  }
+
+  .flying-color {
+    color: linear-gradient(to bottom right, red, yellow);
+  }
+</style>

@@ -1,6 +1,10 @@
 <template>
     <div class="container-finalizado"
     >
+      <audio id="opening" 
+        src="../../assets/Opening.mp3"
+        loop
+      ></audio>
       <banner :titulo="bannerTitulo">
         <template v-slot:subtitulo>
           <div>
@@ -37,6 +41,16 @@
           bannerTitulo: "Cadastro realizado!",
           dialog: false
         }
+      },
+      mounted(){
+        this.playSound();
+      },
+      methods: {
+        playSound () {
+          var player = document.getElementById('opening');
+          player.play()
+          player.volume = 0.2; 
+        },
       }
       
     }
@@ -48,7 +62,7 @@
     background-image: url("../../assets/pokereganto.jpg");
     /*background-repeat: repeat;*/
     background-color: #DDDDDD;
-    background-size: 88em;
+    background-size: cover;
     height: 100vh; /*88 para não ter rolamento*/
   }
   .finalizado-conteiner{

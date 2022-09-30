@@ -1,5 +1,9 @@
 <template>
   <v-app>
+    <audio id="walkingTheme" 
+      src="../../assets/WalkingTheme.mp3"
+      loop
+      ></audio>
     <banner :titulo="bannerTitulo">
       <template v-slot:subtitulo>
         <div>
@@ -65,11 +69,9 @@ export default {
   },
 
   mounted() {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=151")
-      .then((response) => {
-        this.pokemons = response.data.results;
-      });
+    this.get_pokemons();
+    this.playSound();
+    
   },
   methods: {
     show_pokemon(id) {
@@ -78,22 +80,23 @@ export default {
         this.show_dialog = !this.show_dialog;
       });
     },
-    get_move_level(move) {
-      for (let version of move.version_group_details) {
-        if (
-          version.version_group.name == "sword-shield" &&
-          version.move_learn_method.name == "level-up"
-        ) {
-          return version.level_learned_at;
-        }
-      }
-      return 0;
+    get_pokemons() {
+      axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=151")
+      .then((response) => {
+        this.pokemons = response.data.results;
+      });
+    },
+    playSound () {
+      var player = document.getElementById('walkingTheme');
+      player.play()
+      player.volume = 0.2; 
     },
   },
   computed: {
     filtered_pokemons() {
       return this.pokemons.filter((item) => {
-        return item.name.includes(this.search);
+        return item.name.includes(this.search.toLowerCase());
       });
     },
   },
@@ -109,5 +112,6 @@ export default {
   background-size: cover !important;
   background-position: center;
   min-height: 100vh;
+  font-family: 'PixAntiqua', sans-serif;
 }
 </style>
