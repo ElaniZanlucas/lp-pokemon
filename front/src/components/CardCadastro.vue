@@ -204,7 +204,6 @@
     class="botao"
     :disabled="!valid"
     @click="validate"
-    to="cadastro/finalizado"
     type="submit"
     >
     <v-btn-title class="botao-title">Salvar</v-btn-title>
