@@ -4,7 +4,7 @@
       <v-row no-gutters>
         <div class="dep-init">
           <div class="dep-img">
-            <v-img src="../assets/Pokebola.png"></v-img>
+            <v-img class="dep-pokebola" src="../assets/Pokebola.png"></v-img>
           </div>
 
           <v-card-title class="dep-nome">
@@ -62,6 +62,14 @@ export default {
     align-items: center;
     background: #2F2F4D;
     border-radius: 32px;
+  }
+
+  .dep-pokebola {
+    transition: transform 0.5s;
+  }
+
+  .dep-pokebola:hover {
+    transform: rotate(720deg);
   }
 
   .dep-nome {

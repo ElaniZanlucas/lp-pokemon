@@ -46,7 +46,7 @@
       playSound () {
         var player = document.getElementById('battleTheme');
         player.play()
-        player.volume = 0.2; 
+        player.volume = 0.1; 
       },
       submitItem () { bus.$emit('submit-item') }
     }

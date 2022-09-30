@@ -2,7 +2,7 @@
   <div>
     <v-card class="card-home rounded-lg" :to="{name: rota}">
       <v-card-title class="card-home-title">{{titulo}}</v-card-title>
-      <div class="pokebola">
+      <div class="home-pokebola">
         <v-img src="../assets/Pokebola.png"></v-img>
       </div>
         <v-card-text class="card-home-text fix-css">
@@ -33,8 +33,7 @@ export default {
     align-items: center;
     border-radius: 100px;
     margin: 0;
-    text-transform: none;
-    
+    text-transform: none;    
   }
 
   .card-home-title {
@@ -44,12 +43,17 @@ export default {
     font-size: 1.6em;
   }
 
-  .pokebola {
+  .home-pokebola {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6.4em;
-    width: 6.4em;
+    height: 3.6em;
+    width: 3.6em;
+    transition: transform 0.5s;
+  }
+
+  .home-pokebola:hover {
+    transform: rotate(720deg);
   }
 
   .card-home-text {

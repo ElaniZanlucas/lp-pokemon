@@ -49,7 +49,7 @@
         playSound () {
           var player = document.getElementById('opening');
           player.play()
-          player.volume = 0.2; 
+          player.volume = 0.1; 
         },
       }
       

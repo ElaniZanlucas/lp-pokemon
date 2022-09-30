@@ -85,12 +85,6 @@
 </script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    /* width: 100vw; */
-  }
-
   .container-home {
     background-color: #173BBC;
     padding-bottom: 4.8em;

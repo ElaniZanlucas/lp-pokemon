@@ -29,10 +29,10 @@
         Pokémons:
       </v-row>
 
-      <v-row no-gutters class="pokebolas">
-        <v-img class="pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon1}.png`" :title="`${titlePokemon1}`"></v-img>
-        <v-img class="pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon2}.png`" :title="`${titlePokemon2}`"></v-img>
-        <v-img class="pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon3}.png`" :title="`${titlePokemon3}`"></v-img>
+      <v-row no-gutters class="ab-pokebolas">
+        <v-img class="ab-pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon1}.png`" :title="`${titlePokemon1}`"></v-img>
+        <v-img class="ab-pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon2}.png`" :title="`${titlePokemon2}`"></v-img>
+        <v-img class="ab-pokebola" :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${megaPokemon3}.png`" :title="`${titlePokemon3}`"></v-img>
       </v-row>
     </v-card>
   </div>
@@ -78,6 +78,11 @@ export default {
     position: absolute;
     top: 11px;
     right: 8px;
+    transition: transform 0.5s;
+  }
+
+  .mega-img:hover {
+    transform: rotate(720deg);
   }
 
   .mega-deuses {
@@ -92,18 +97,18 @@ export default {
     padding: 0.4em 1em;    
   } 
 
-  .pokebolas {
+  .ab-pokebolas {
     display: flex;
     justify-content: space-around;
   }
 
-  .pokebola {
+  .ab-pokebola {
     max-height: 3.6em;
     max-width: 3.6em;
     transition: transform 0.5s;
   }
 
-  .pokebola:hover {
+  .ab-pokebola:hover {
     transform: rotate(720deg);
     background-image: url("../assets/Pokebola.png");
     background-position: center;
