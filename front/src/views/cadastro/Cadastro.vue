@@ -62,7 +62,7 @@
   background-color: #DDDDDD;
   /*padding-bottom: 4.8em;*/
   /* width: 100vw; */
-  height: 105vh; /*88 para não ter rolamento*/
+  height: 100%; /*88 para não ter rolamento*/
 }
 .card-cadastro-conteiner{
   display: flex;
