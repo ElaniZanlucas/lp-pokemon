@@ -1,10 +1,14 @@
 <template>
   <div class="container-cadastro"
   >
+    <audio id="battleTheme" 
+      src="../../assets/BattleTheme.mp3"
+      loop
+    ></audio>
     <banner :titulo="bannerTitulo">
       <template v-slot:subtitulo>
         <div>
-          Escolha um jogador para se cadastrar
+          Preencha os dados dos jogadores para se cadastrar
         </div>
       </template>
     </banner>
@@ -12,18 +16,7 @@
     <v-conteiner>
       <v-row class="card-cadastro-conteiner"
       >
-        <card-cadastro/>
-        <card-cadastro/>
-      </v-row>
-      <v-row class="cadastro-botao-conteiner">
-        <botao
-          titulo="Voltar" 
-          rota="home"
-        ></botao>
-        <botao
-          titulo="Salvar" 
-          rota="finalizado"
-        ></botao>
+        <card-cadastro />
       </v-row>
     </v-conteiner>
     
@@ -33,20 +26,29 @@
 <script>
   import Banner from '../../components/Banner.vue'
   import CardCadastro from '../../components/CardCadastro.vue'
-  import Botao from '../../components/Botao.vue'
 
   export default {
     name: 'cadastro',
     components: {
     Banner,
     CardCadastro,
-    Botao
 },
     data() {
       return {
         bannerTitulo: "Cadastro",
         dialog: false
       }
+    },
+    mounted(){
+      this.playSound();
+    },
+    methods: {
+      playSound () {
+        var player = document.getElementById('battleTheme');
+        player.play()
+        player.volume = 0.2; 
+      },
+      submitItem () { bus.$emit('submit-item') }
     }
     
   }
@@ -64,13 +66,7 @@
 }
 .card-cadastro-conteiner{
   display: flex;
-  justify-content: space-around;
-}
-
-.cadastro-botao-conteiner{
-  display: flex;
-  justify-content:space-between;
-  margin: 5em;
+  justify-content: center;
 }
 
 </style>
