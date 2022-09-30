@@ -201,12 +201,12 @@
     </v-container>
 
     <v-btn
-    class="botao"
+    class="botao-cadastro"
     :disabled="!valid"
     @click="validate"
     type="submit"
     >
-    <v-btn-title class="botao-title">Salvar</v-btn-title>
+    <v-btn-title class="botao-cadastro-title">Salvar</v-btn-title>
     </v-btn>
 </v-form> 
 </template>
@@ -266,10 +266,6 @@ import Botao from "./Botao.vue";
   </script>
   
   <style>
-    .container{
-        background-color: #173BBC !important;
-        margin: 0 60px;
-    }
   
     .pokebola {
       display: flex;
@@ -288,7 +284,7 @@ import Botao from "./Botao.vue";
       font-weight: bold;
       font-size: 1em;
     } */
-    .botao {
+    .botao-cadastro {
       height: 6em;
       width: 2em;
       /*display: flex;*/
@@ -301,7 +297,7 @@ import Botao from "./Botao.vue";
       text-transform: none;
     }
 
-    .botao-title {
+    .botao-cadastro-title {
       color: #F9F2E7;
       font-family: 'PixAntiqua', sans-serif;
       text-shadow: -1px -1px 0 #FE0000, 1px -1px 0 #FE0000, -1px 1px 0 #FE0000, 1px 1px 0 #FE0000;
