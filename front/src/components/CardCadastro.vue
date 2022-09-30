@@ -158,7 +158,6 @@
     >
       <v-btn-title class="botao-cadastro-title">Salvar</v-btn-title>
     </v-btn>
-    
   </v-form>
 </template>
 
@@ -193,7 +192,7 @@ export default {
       pokemon1B: '',
       pokemon2B: '',
       pokemon3B: '',
-      pokeRules: [v => !!v || 'Selecione um Pokémon'],
+      pokeRules: [v => !!v || 'Selecione um Pokémon']
     }
   },
   mounted() {
@@ -221,12 +220,12 @@ export default {
         pokemon2B: this.pokemon2B,
         pokemon3B: this.pokemon3B
       }
-      console.log("PASSEI AQUI")
+      console.log('PASSEI AQUI')
       try {
         axios.post('http://localhost:8081/grupo', grupo)
         this.$router.push({ name: 'finalizado' })
       } catch (error) {
-        console.log("Erro ao ser um Treinador Pokémon")
+        console.log('Erro ao ser um Treinador Pokémon')
       }
     }
   }

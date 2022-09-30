@@ -4,7 +4,7 @@
       <template v-slot:subtitulo>
         <div>
           Quer saber como é ser nosso adversário?
-          <br>
+          <br />
           Veja alguns relatos!
         </div>
       </template>
@@ -13,106 +13,78 @@
     <v-row class="row-depoimentos">
       <div class="cards-depoimentos">
         <v-col cols="12" md="4">
-          <card-depoimentos 
-            nome="Ash Ketchum"
-          >
+          <card-depoimentos nome="Ash Ketchum">
             <template v-slot:descricao>
-              <div>
-                Saí chorando. Estou fazendo terapia até hoje...
-              </div>
-            </template> 
+              <div>Saí chorando. Estou fazendo terapia até hoje...</div>
+            </template>
           </card-depoimentos>
 
-          <card-depoimentos 
-            nome="Tiago Lacerda"
-          >
+          <card-depoimentos nome="Tiago Lacerda">
             <template v-slot:descricao>
               <div>
-                Só tenho Pokémon bosta, menos o kabuto. 
-                <br>
+                Só tenho Pokémon bosta, menos o kabuto.
+                <br />
                 O kabuto é legal.
               </div>
-            </template> 
+            </template>
           </card-depoimentos>
 
-          <card-depoimentos 
-            nome="Menino Ney"
-          >
+          <card-depoimentos nome="Menino Ney">
             <template v-slot:descricao>
-              <div>
-                Tropecei na pokebola e caí. 
-              </div>
-            </template> 
+              <div>Tropecei na pokebola e caí.</div>
+            </template>
           </card-depoimentos>
         </v-col>
 
         <v-col cols="12" md="4">
-          <card-depoimentos 
-            nome="Pitaya"
-          >
+          <card-depoimentos nome="Pitaya">
             <template v-slot:descricao>
               <div>
                 Carregaram o time só com o Pikachu.
-                <br>
+                <br />
                 Fiquei em choque!
               </div>
-            </template> 
-          </card-depoimentos>
-          
-          <card-depoimentos 
-            nome="Guy Sensei"
-          >
-            <template v-slot:descricao>
-              <div>
-                Fugiram da revanche.
-              </div>
-            </template> 
+            </template>
           </card-depoimentos>
 
-          <card-depoimentos 
-            nome="Inosuke Hashibira"
-          >
+          <card-depoimentos nome="Guy Sensei">
+            <template v-slot:descricao>
+              <div>Fugiram da revanche.</div>
+            </template>
+          </card-depoimentos>
+
+          <card-depoimentos nome="Inosuke Hashibira">
             <template v-slot:descricao>
               <div>
-                A Batalha mostrou que eles ganharam, 
-                <br>
+                A Batalha mostrou que eles ganharam,
+                <br />
                 mas eu diria que foi um empate.
               </div>
-            </template> 
+            </template>
           </card-depoimentos>
         </v-col>
 
         <v-col cols="12" md="4">
-          <card-depoimentos 
-            nome="Satoshi Tajiri"
-          >
+          <card-depoimentos nome="Satoshi Tajiri">
             <template v-slot:descricao>
               <div>
                 Shino tava ligado no 220V, Yasmin tava com fogo
-                <br>
+                <br />
                 nos olhos e eu tava com medo...
               </div>
-            </template> 
+            </template>
           </card-depoimentos>
 
-          <card-depoimentos 
-            nome="Doom Guy"
-          >
+          <card-depoimentos nome="Doom Guy">
             <template v-slot:descricao>
-              <div>
-                The only thing I fear is Shino.
-              </div>
-            </template> 
+              <div>The only thing I fear is Shino.</div>
+            </template>
           </card-depoimentos>
 
-          <card-depoimentos 
-            nome="Vergil"
-          >
+          <card-depoimentos nome="Vergil">
             <template v-slot:descricao>
-              <div>
-                Shino is the storm that it's approaching...
-              </div>
-            </template> 
+              <div>Shino is the storm that it's approaching...</div>
+            </template>
           </card-depoimentos>
         </v-col>
       </div>
@@ -121,44 +93,41 @@
 </template>
 
 <script>
-  import Banner from "../../components/Banner.vue"
-  import CardDepoimentos from "../../components/CardDepoimentos.vue"
+import Banner from '../../components/Banner.vue'
+import CardDepoimentos from '../../components/CardDepoimentos.vue'
 
-  export default {
-    name: 'depoimentos',
-    components: {
-      Banner,
-      CardDepoimentos
-    },
-    data() {
-      return {
-        bannerTitulo: "Depoimentos"
-      }
+export default {
+  name: 'depoimentos',
+  components: {
+    Banner,
+    CardDepoimentos
+  },
+  data() {
+    return {
+      bannerTitulo: 'Depoimentos'
     }
   }
+}
 </script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-   
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  .container-depoimentos {
-    background-color: #173BBC;
-    padding-bottom: 4.8em;
-   
-  }
+.container-depoimentos {
+  background-color: #173bbc;
+  padding-bottom: 4.8em;
+}
 
-  .row-depoimentos {
-    display: flex;
-    justify-content: center;
-  }
+.row-depoimentos {
+  display: flex;
+  justify-content: center;
+}
 
-  .cards-depoimentos {
-    display: flex;
-    /* background-color: blueviolet; */
-  }
-
+.cards-depoimentos {
+  display: flex;
+  /* background-color: blueviolet; */
+}
 </style>
