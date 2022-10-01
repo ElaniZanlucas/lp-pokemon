@@ -1,8 +1,14 @@
 <template>
-  <div>
+  <div class="container-inscritos">
     <audio id="walkingTheme" src="../../assets/WalkingTheme.mp3" loop></audio>
-    <div v-for="grupo in grupos" :key="grupo.id">
-      <card-inscritos :grupo="grupo" @clicked="show_grupo"> </card-inscritos>
+
+    <banner titulo="Inscritos">
+    </banner>
+
+    <div class="lista-card-inscritos">
+      <div class="for-inscritos" v-for="grupo in grupos" :key="grupo.id">
+        <card-inscritos :grupo="grupo" @clicked="show_grupo"> </card-inscritos>
+      </div>
     </div>
 
     <inscritos-dialog :show.sync="show_dialog" :grupo="selected_grupo">
@@ -12,12 +18,14 @@
 
 <script>
 import axios from 'axios'
+import Banner from '../../components/Banner.vue'
 import InscritosDialog from '../../components/InscritosDialog.vue'
 import CardInscritos from '../../components/CardInscritos.vue'
 
 export default {
   name: 'inscritos',
   components: {
+    Banner,
     InscritosDialog,
     CardInscritos
   },
@@ -51,4 +59,19 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .container-inscritos {
+    background-color: #DDDDDD;
+  }
+
+  .lista-card-inscritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.for-inscritos {
+  margin: 2em 0;
+}
+
+</style>

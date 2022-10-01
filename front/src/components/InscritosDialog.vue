@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-dialog v-model="show" width="440">
-      <div v-if="grupo">
+    <v-dialog v-model="show" width="600">
+      <div class="div-inscritos-dialog" v-if="grupo">
         <card-inscritos-dialog
           :nome="grupo.nameA"
           :email="grupo.emailA"
@@ -17,7 +17,7 @@
           :inscritosPokemon2="grupo.pokemon2B"
           :inscritosPokemon3="grupo.pokemon3B"
         >
-        </card-inscritos-dialog>
+        </card-inscritos-dialog> 
       </div>
     </v-dialog>
   </div>
@@ -43,4 +43,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+  .div-inscritos-dialog{
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

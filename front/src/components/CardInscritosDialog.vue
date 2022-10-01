@@ -1,29 +1,55 @@
 <template>
   <div>
-    <v-card class="card-about-us rounded-lg">
+    <v-card class="card-inscritos-dialog rounded-lg">
       <div class="insc-img">
-        <v-img src="../assets/wtpokemon.png"></v-img>
+        <v-img class="rounded-lg" src="../assets/wtpokemon.png"></v-img>
       </div>
 
-      <v-row no-gutters class="insc-name"> Nome: {{ nome }} </v-row>
+      <v-row no-gutters class="insc-desc"> Nome: {{ nome }} </v-row>
 
-      <v-row no-gutters class="insc-email"> Email: {{ email }} </v-row>
+      <v-row no-gutters class="insc-desc"> Email: {{ email }} </v-row>
 
-      <v-col no-gutters class="insc-pokemons">
-        <v-row class="insc-pokemon">
-          <v-img class="insc-pokebola" src="../assets/Pokebola.png"></v-img>
-          <p class="p-pokemon">{{ inscritosPokemon1 }}</p>
+      <v-col no-gutters class="card-insc-pokemons">
+        <v-row no-gutters class="card-insc-pokemon">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-img
+                v-on="on"
+                class="insc-pokebola"
+                src="../assets/Pokebola.png"
+              ></v-img>
+            </template>
+            <span class="p-pokemon">{{ inscritosPokemon1 }}</span>
+          </v-tooltip>
         </v-row>
 
-        <v-row class="insc-pokemon">
-          <v-img class="insc-pokebola" src="../assets/Pokebola.png"></v-img>
-          <p class="p-pokemon">{{ inscritosPokemon2 }}</p>
+        <v-row no-gutters class="card-insc-pokemon">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-img
+                v-on="on"
+                class="insc-pokebola"
+                src="../assets/Pokebola.png"
+              ></v-img>
+            </template>
+            <span class="p-pokemon">{{ inscritosPokemon2}}</span>
+          </v-tooltip>
         </v-row>
 
-        <v-row class="insc-pokemon">
-          <v-img class="insc-pokebola" src="../assets/Pokebola.png"></v-img>
-          <p class="p-pokemon">{{ inscritosPokemon3 }}</p>
+        <v-row no-gutters class="card-insc-pokemon">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <v-img
+                v-on="on"
+                class="insc-pokebola"
+                src="../assets/Pokebola.png"
+              ></v-img>
+            </template>
+            <span class="p-pokemon">{{ inscritosPokemon3 }}</span>
+          </v-tooltip>
         </v-row>
+
+        
       </v-col>
     </v-card>
   </div>
@@ -43,31 +69,32 @@ export default {
 </script>
 
 <style>
-.card-inscritos {
+.card-inscritos-dialog {
+  background-color: #202792 !important;
   width: 18em;
   height: 25.4em;
-  margin-right: 4em;
-  background-color: #202792;
 }
 
 .insc-img {
-  margin: 0 1em;
-  width: 4em;
-  background-color: #cbe4ea;
+  padding: 2em 2em 0 2em;
+  width: 100%;
+  /* background-color: #cbe4ea; */
 }
 
-.insc-name {
+.insc-desc {
+  color: #f9f2e7;
+  padding: 1em 2em 0 2em;
 }
 
-.insc-email {
-}
-
-.insc-pokemons {
+.card-insc-pokemons {
+  margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
 
-.insc-pokemon {
+.card-insc-pokemon {
+  justify-content: center;
+  align-items: center;
 }
 
 .insc-pokebola {
