@@ -1,5 +1,5 @@
 <template>
-  <div class="container-home">
+  <div id="inicio" class="container-home">
     <banner :titulo="bannerTitulo">
       <template v-slot:subtitulo>
         <div>

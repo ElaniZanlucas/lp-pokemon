@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <v-app-bar class="app-bar">
-      <v-btn class="logo btn" plain :to="{ name: 'home' }">
+      <v-btn class="logo btn" plain href="/#inicio">
         Equipe Megamon
       </v-btn>
       <div class="nav-items">

@@ -44,7 +44,7 @@ export default {
     },
     show_pokemon(id) {
       this.$emit('clicked', id)
-    }
+    } 
   }
 }
 </script>
