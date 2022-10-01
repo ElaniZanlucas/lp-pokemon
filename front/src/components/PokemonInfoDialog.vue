@@ -7,6 +7,7 @@
             <h1>{{ get_name(selected_pokemon) }}</h1>
             <h2>#{{ get_id(selected_pokemon) }}</h2>
           </v-row>
+
           <v-row class="sprites">
             <v-col>
               <PokemonType
@@ -16,16 +17,16 @@
               />
             </v-col>
             <img
-                class="sprite-front"
-                :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selected_pokemon.id}.png`"
-                :alt="selected_pokemon.name"
-              />
-              <img
-                class="sprite-back"
-                :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${selected_pokemon.id}.png`"
-                :alt="selected_pokemon.name"
-                width="80%"
-              />
+              class="sprite-front"
+              :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selected_pokemon.id}.png`"
+              :alt="selected_pokemon.name"
+            />
+            <img
+              class="sprite-back"
+              :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${selected_pokemon.id}.png`"
+              :alt="selected_pokemon.name"
+              width="80%"
+            />
           </v-row>
         </div>
 
@@ -38,11 +39,12 @@
 </template>
 
 <script>
-import Stats from "./Stats.vue";
-import PokemonType from "./PokemonType.vue";
-import CardPokemon from "./CardPokemon.vue";
+import Stats from './Stats.vue'
+import PokemonType from './PokemonType.vue'
+import CardPokemon from './CardPokemon.vue'
 
 export default {
+  name: 'pokemon-info-dialog',
   components: {
     Stats,
     PokemonType,
@@ -50,66 +52,66 @@ export default {
   },
   props: {
     show: Boolean,
-    selected_pokemon: Object,
+    selected_pokemon: Object
   },
   methods: {
     get_name(pokemon) {
-      return pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+      return pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
     },
     get_id(pokemon) {
-      return pokemon.id;
+      return pokemon.id
     },
     transform_move_name(name) {
-      let response = "";
-      for (let part of name.split("-")) {
-        response += part.charAt(0).toUpperCase() + part.slice(1) + " ";
+      let response = ''
+      for (let part of name.split('-')) {
+        response += part.charAt(0).toUpperCase() + part.slice(1) + ' '
       }
-      return response;
-    },
+      return response
+    }
   },
   watch: {
     show() {
-      this.$emit("update:show", this.show);
-    },
-  },
-};
+      this.$emit('update:show', this.show)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-  .dialog-container {
-    padding: 0;
-    background-color: #00A8C6;
-  }
+.dialog-container {
+  padding: 0;
+  background-color: #00a8c6;
+}
 
-  .dialog-pokemon {
-    padding: 2em;
-  }
+.dialog-pokemon {
+  padding: 2em;
+}
 
-  .name-id {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Play', sans-serif;
-    color: #F5F5F6;
-  }
+.name-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Play', sans-serif;
+  color: #f5f5f6;
+}
 
-  .sprites {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+.sprites {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-  .sprite-front {
-    width: 10em;
-    height: 10em;
-  }
+.sprite-front {
+  width: 10em;
+  height: 10em;
+}
 
-  .sprite-back {
-    width: 6.4em;
-    height: 6.4em;
-  }
+.sprite-back {
+  width: 6.4em;
+  height: 6.4em;
+}
 
-  .stats {
-    font-family: 'Play', sans-serif;
-  }
+.stats {
+  font-family: 'Play', sans-serif;
+}
 </style>

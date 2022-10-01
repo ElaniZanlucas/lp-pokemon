@@ -1,8 +1,10 @@
-const express = require("express")
+const express = require('express')
 const routes = express.Router()
 
-routes.get("/", (req, res) => {
-  res.send("Ok")
-})
+const GrupoController = require('./controler/GrupoController')
 
-module.exports = routes;
+routes.post('/grupo', GrupoController.store)
+
+routes.get('/grupo', GrupoController.searchAll)
+
+module.exports = routes

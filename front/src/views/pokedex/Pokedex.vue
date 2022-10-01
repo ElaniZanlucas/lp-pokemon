@@ -1,14 +1,11 @@
 <template>
   <v-app>
-    <audio id="walkingTheme" 
-      src="../../assets/WalkingTheme.mp3"
-      loop
-      ></audio>
+    <audio id="walkingTheme" src="../../assets/WalkingTheme.mp3" loop></audio>
     <banner :titulo="bannerTitulo">
       <template v-slot:subtitulo>
         <div>
-          Pesquise os Pokémons, veja suas forças e 
-          <br>
+          Pesquise os Pokémons, veja suas forças e
+          <br />
           escolha-os para a MegaBatalha.
         </div>
       </template>
@@ -22,7 +19,7 @@
           solo
         >
         </v-text-field>
-        
+
         <v-row>
           <v-col
             cols="6"
@@ -44,68 +41,67 @@
 </template>
 
 <script>
-import axios from "axios";
-import Banner from "../../components/Banner.vue"
-import PokemonCard from "../../components/CardPokemon.vue";
-import PokemonInfoDialog from "../../components/PokemonInfoDialog.vue";
+import axios from 'axios'
+import Banner from '../../components/Banner.vue'
+import PokemonCard from '../../components/CardPokemon.vue'
+import PokemonInfoDialog from '../../components/PokemonInfoDialog.vue'
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     Banner,
     PokemonCard,
-    PokemonInfoDialog,
+    PokemonInfoDialog
   },
 
   data() {
     return {
       pokemons: [],
-      search: "",
+      search: '',
       show_dialog: false,
       selected_pokemon: null,
-      bannerTitulo: "Pokédex",
-    };
+      bannerTitulo: 'Pokédex'
+    }
   },
 
   mounted() {
-    this.get_pokemons();
-    this.playSound();
-    
+    this.get_pokemons()
+    this.playSound()
   },
   methods: {
     show_pokemon(id) {
-      axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((response) => {
-        this.selected_pokemon = response.data;
-        this.show_dialog = !this.show_dialog;
-      });
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then(response => {
+        this.selected_pokemon = response.data
+        this.show_dialog = !this.show_dialog
+      })
     },
     get_pokemons() {
       axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=151")
-      .then((response) => {
-        this.pokemons = response.data.results;
-      });
+        .get('https://pokeapi.co/api/v2/pokemon?limit=151')
+        .then(response => {
+          this.pokemons = response.data.results
+        })
     },
-    playSound () {
-      var player = document.getElementById('walkingTheme');
+    playSound() {
+      var player = document.getElementById('walkingTheme')
       player.play()
-      player.volume = 0.2; 
-    },
+      player.volume = 0.2
+    }
   },
   computed: {
     filtered_pokemons() {
-      return this.pokemons.filter((item) => {
-        return item.name.includes(this.search.toLowerCase());
-      });
-    },
-  },
-};
+      return this.pokemons.filter(item => {
+        return item.name.includes(this.search.toLowerCase())
+      })
+    }
+  }
+}
 </script>
 
 <style>
 #app {
-  background: #173BBC;
+  background: #173bbc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
